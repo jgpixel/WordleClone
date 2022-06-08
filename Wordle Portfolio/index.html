@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="src/css/styles.css">
+
+    <script src="src/js/script.js" type="module"></script>
+
+    <title>Wordle Clone</title>
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-divider">
+            <a class="github-link" href="https://github.com/jgorelik23/WordleClone" target="_blank">
+                <img class="nav-icon icon" src="src/icons/github-logo.svg" alt="Link to GitHub repository for this project.">
+            </a>
+        </div>
+        <h1>Wordle Clone</h1>
+        <div class="nav-divider">
+            <button id="change-theme-btn" class="change-theme-btn">
+                <img id="change-theme-icon" class="nav-icon icon" src="src/icons/moon.svg" alt="Change game theme.">
+            </button>
+        </div>
+    </nav>
+
+    <div id="modal-bg" class="modal-bg">
+        <div id="modal" class="modal">
+            <div class="modal-nav">
+                <button id="share-project-btn" class="close-modal-btn">
+                    <img class="cross-icon icon" src="src/icons/share.svg" alt="Share this project.">
+                </button>
+                <h3>Thanks for playing!</h3>
+                <button id="close-modal-btn" class="close-modal-btn">
+                    <img class="cross-icon icon" src="src/icons/cross.svg" alt="Close modal.">
+                </button>
+            </div>
+            <div class="modal-content">
+                <div class="next-wordle-container">
+                    <h4>NEXT WORDLE</h5>
+                    <div id="countdown-container" class="countdown-container"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <div id="alerts-container" class="alerts-container"></div>
+        <div class="grid">
+            <div class="grid-row" data-grid-row-1>
+                <div class="letter-box"></div>
+                <div class="letter-box"></div>
+                <div class="letter-box"></div>
+                <div class="letter-box"></div>
+                <div class="letter-box"></div>
+            </div>
+    
+            <div class="grid-row" data-grid-row-2>
+                <div class="letter-box"></div>
+                <div class="letter-box"></div>
+                <div class="letter-box"></div>
+                <div class="letter-box"></div>
+                <div class="letter-box"></div>
+            </div>
+    
+            <div class="grid-row" data-grid-row-3>
+                <div class="letter-box"></div>
+                <div class="letter-box"></div>
+                <div class="letter-box"></div>
+                <div class="letter-box"></div>
+                <div class="letter-box"></div>
+            </div>
+    
+            <div class="grid-row" data-grid-row-4>
+                <div class="letter-box"></div>
+                <div class="letter-box"></div>
+                <div class="letter-box"></div>
+                <div class="letter-box"></div>
+                <div class="letter-box"></div>
+            </div>
+    
+            <div class="grid-row" data-grid-row-5>
+                <div class="letter-box"></div>
+                <div class="letter-box"></div>
+                <div class="letter-box"></div>
+                <div class="letter-box"></div>
+                <div class="letter-box"></div>
+            </div>
+    
+            <div class="grid-row" data-grid-row-6>
+                <div class="letter-box"></div>
+                <div class="letter-box"></div>
+                <div class="letter-box"></div>
+                <div class="letter-box"></div>
+                <div class="letter-box"></div>
+            </div>
+        </div>
+
+        <div class="keyboard">
+            <div class="keyboard-row">
+                <button class="key" data-key data-q>Q</button>
+                <button class="key" data-key data-w>W</button>
+                <button class="key" data-key data-e>E</button>
+                <button class="key" data-key data-r>R</button>
+                <button class="key" data-key data-t>T</button>
+                <button class="key" data-key data-y>Y</button>
+                <button class="key" data-key data-u>U</button>
+                <button class="key" data-key data-i>I</button>
+                <button class="key" data-key data-o>O</button>
+                <button class="key" data-key data-p>P</button>
+            </div>
+            <div class="keyboard-row">
+                <button class="key" data-key data-a>A</button>
+                <button class="key" data-key data-s>S</button>
+                <button class="key" data-key data-d>D</button>
+                <button class="key" data-key data-f>F</button>
+                <button class="key" data-key data-g>G</button>
+                <button class="key" data-key data-h>H</button>
+                <button class="key" data-key data-j>J</button>
+                <button class="key" data-key data-k>K</button>
+                <button class="key" data-key data-l>L</button>
+            </div>
+            <div class="keyboard-row">
+                <button id="enter-btn" class="key big-key">ENTER</button>
+                <button class="key" data-key data-z>Z</button>
+                <button class="key" data-key data-x>X</button>
+                <button class="key" data-key data-c>C</button>
+                <button class="key" data-key data-v>V</button>
+                <button class="key" data-key data-b>B</button>
+                <button class="key" data-key data-n>N</button>
+                <button class="key" data-key data-m>M</button>
+                <button id="delete-btn" class="key big-key">
+                    <img class="delete-icon icon" src="src/icons/delete.svg" alt="delete icon">
+                </button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
