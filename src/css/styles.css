@@ -327,6 +327,7 @@ h5 {
 @media only screen and (max-width: 550px) {
     .key {
         width: 7.6vw;
+        font-size: 11px;
     }
 
     .big-key {
