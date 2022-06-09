@@ -21,7 +21,7 @@ let colPos = 0;
 
 const startYear = Math.floor(new Date().getFullYear() / 6) * 6;
 const startDate = new Date(startYear, 0, 1);
-const currentDate = new Date(2022, 5, 9);
+const currentDate = new Date();
 const daysDifference = Math.ceil(Math.abs(currentDate - startDate) / (86_400_000));
 const targetWord = targetWords[daysDifference].split("");
 // console.log("Target Word: ", targetWord.join("")); // UNCOMMENT THIS LINE TO LOG THE ANSWER!
