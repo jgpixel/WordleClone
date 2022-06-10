@@ -50,7 +50,7 @@ if (targetWord.join("") !== winningWordFromLocalStorage && !gameInProgressFromLo
 }
 
 if (gameInProgressFromLocalStorage || winningWordFromLocalStorage === targetWord.join("")) {
-    setBoard();
+    setTimeout(setBoard, 50);
 }
 
 let isDarkThemeFromLocalStorage = JSON.parse(localStorage.getItem("isDarkTheme"));
