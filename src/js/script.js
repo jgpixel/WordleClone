@@ -133,7 +133,9 @@ function enterGuess() {
             }, ANIMATION_DURATION * 5 + 1400);
         } else if (rowPos >= 5) {
             gameOver = true;
-            sendAlert(targetWord.join("").toUpperCase(), true);
+            setTimeout(() => {
+                sendAlert(targetWord.join("").toUpperCase(), true);
+            }, ANIMATION_DURATION * 5 + 300);
         }
     } else {
         jitterLetterBoxes();
@@ -303,7 +305,7 @@ function flipLetterBoxes(colorClasses, row = rowPos) {
     for (let i = 0; i < 5; i++) {
         setTimeout(() => {
             flipLetterBox(letterBoxes[row][i], colorClasses[i])
-        }, i * ANIMATION_DURATION);
+        }, ANIMATION_DURATION * i);
     }
 }
 
@@ -320,7 +322,7 @@ function jumpLetterBoxes() {
     for (let i = 0; i < 5; i++) {
         setTimeout(() => {
             jumpLetterBox(letterBoxes[rowPos][i])
-        }, i * (ANIMATION_DURATION / 2));
+        }, ANIMATION_DURATION / 2 * i);
     }
 }
 
