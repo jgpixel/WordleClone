@@ -20,11 +20,13 @@ let rowPos = 0;
 let colPos = 0;
 
 const startYear = Math.floor(new Date().getFullYear() / 6) * 6;
-const startDate = new Date(startYear, 0, 1);
+const startDate = new Date(`Jan 1 ${startYear} 00:00:00 GMT-0400`);
 const currentDate = new Date();
+console.log('startDate :>> ', startDate);
+console.log('currentDate :>> ', currentDate);
 const daysDifference = Math.ceil(Math.abs(currentDate - startDate) / (86_400_000));
 const targetWord = targetWords[daysDifference].split("");
-// console.log("Target Word: ", targetWord.join("")); // UNCOMMENT THIS LINE TO LOG THE ANSWER!
+console.log("Target Word: ", targetWord.join("")); // UNCOMMENT THIS LINE TO LOG THE ANSWER!
 
 const modalBg = document.getElementById("modal-bg");
 const modal = document.getElementById("modal");
